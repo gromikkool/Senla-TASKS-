@@ -8,15 +8,13 @@ public class FifthMain {
         NumberReader numberReader = new NumberReader(System.in);
         System.out.println("Введите длину последовательности, она не должна быть больше 100 и меньше 0: ");
         int number = numberReader.readInt();
-        if(!(number < 0 || number > 100))
-        {
-            for (int i=0; i < number+1; i++)
-            {
-                if(NumUtil.isPalindrome(i)) System.out.println(i);
+        if (!(number < 0 || number > 100)) {
+            for (int i = 0; i < number + 1; i++) {
+                if (NumUtil.isPalindrome(i))
+                    System.out.println(i);
             }
 
-        }
-        else
+        } else
             System.out.println("Вы ввели неверную длину: ");
 
     }

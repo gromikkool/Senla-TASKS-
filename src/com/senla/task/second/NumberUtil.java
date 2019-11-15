@@ -6,8 +6,8 @@ public class NumberUtil {
             return Math.abs(a);
         return gcd(b, a % b);
     }
-    public static int lcm(int a, int b)
-    {
-        return a/gcd(a, b)*b;
+
+    public static int lcm(int a, int b) {
+        return a / gcd(a, b) * b;
     }
 }

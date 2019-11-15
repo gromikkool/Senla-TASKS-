@@ -4,70 +4,74 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Backpack {
-    private List<Item> bestItems = null;
-    private final double maxW = 8;
-    private double bestPrice;
 
+    public static final double MAX_WEIGHT = 8;
 
-    private double calculateWeight(List<Item> items)
-    {
-        double sumW = 0;
-        for (int i=0; i<items.size();i++)
-            sumW += items.get(i).getWeight();
-        return sumW;
+    private double weight;
+    private double price;
+    private List<Item> items = new ArrayList<>();
+
+    public Backpack(List<Item> items) {
+        this.items = items;
     }
 
-    private double calcPrice(List<Item> items)
-    {
-        double sumPrice = 0;
+    public Backpack() {
+    }
 
-        for (Item i : items)
-        {
-            sumPrice += i.getPrice();
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    private double calculateWeight() {
+        double sumWeight = 0;
+        for (Item item : items) {
+            sumWeight += item.getWeight();
+        }
+
+        return sumWeight;
+    }
+
+    private double calcPrice() {
+        double sumPrice = 0;
+        for (Item item : items) {
+            sumPrice += item.getPrice();
         }
 
         return sumPrice;
     }
-    private void checkSet(List<Item> items)
-    {
-        if (bestItems == null)
-        {
-            if (calculateWeight(items) <= maxW)
-            {
-                bestItems = items;
-                bestPrice = calcPrice(items);
-            }
-        }
-        else
-        {
-            if(calculateWeight(items) <= maxW && calcPrice(items) > bestPrice)
-            {
-                bestItems = items;
-                bestPrice = calcPrice(items);
-            }
-        }
+
+    public List<Item> getItems() {
+        return items;
     }
 
-    public void makeAllSets(List<Item> items)
-    {
-        if (items.size() > 0)
-            checkSet(items);
-
-        for (int i = 0; i < items.size(); i++)
-        {
-            List<Item> newSet = new ArrayList<>(items);
-
-            newSet.remove(i);
-            makeAllSets(newSet);
-        }
-
-
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
-    public List<Item> getBestSet()
-    {
-        return bestItems;
+    public double getWeight() {
+        weight = calculateWeight();
+        return weight;
     }
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
+    public double getPrice() {
+        price = calcPrice();
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Backpack{" +
+                "weight=" + weight +
+                ", price=" + price +
+                ", items=" + items +
+                '}';
+    }
 }

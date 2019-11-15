@@ -7,16 +7,14 @@ public class FirstMain {
         System.out.print("Введите число: ");
         int number = numberReader.readInt();
 
-        if (NumberUtil.isEven(number)){
+        if (NumberUtil.isEven(number)) {
             System.out.println("Чётное");
-        }
-        else
+        } else
             System.out.println("Нечётное");
 
-        if (NumberUtil.isComposite(number)){
+        if (NumberUtil.isComposite(number)) {
             System.out.println("Это число простое ");
-        }
-        else
+        } else
             System.out.println("Это число составное");
 
     }

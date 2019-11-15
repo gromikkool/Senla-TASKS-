@@ -5,7 +5,8 @@ import java.util.regex.Pattern;
 
 public class TextUtil {
     public static int getWordCount(String text, String word) {
-        if (word.equals(" ") || text.equals("")) throw new IllegalArgumentException("Вы ввели слово с пробелом или пробел");
+        if (word.equals(" ") || text.equals(""))
+            throw new IllegalArgumentException("Вы ввели слово с пробелом или пробел");
 
         text = text.toLowerCase();
         word = word.toLowerCase();

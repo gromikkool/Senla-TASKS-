@@ -1,4 +1,5 @@
 package com.senla.task.second;
+
 import com.senla.task.first.NumberReader;
 
 public class SecondMain {
