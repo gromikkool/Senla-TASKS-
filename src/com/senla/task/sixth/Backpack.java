@@ -3,7 +3,7 @@ package com.senla.task.sixth;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Backpack {
+public class  Backpack {
 
     public static final double MAX_WEIGHT = 8;
 

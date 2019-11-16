@@ -1,6 +1,6 @@
 package com.senla.task.first;
 
-public class FirstMain {
+public class Main {
 
     public static void main(String[] args) {
         NumberReader numberReader = new NumberReader(System.in);

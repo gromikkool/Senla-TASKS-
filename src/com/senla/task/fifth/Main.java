@@ -3,7 +3,7 @@ package com.senla.task.fifth;
 import com.senla.task.first.NumberReader;
 
 
-public class FifthMain {
+public class Main {
     public static void main(String[] args) {
         NumberReader numberReader = new NumberReader(System.in);
         System.out.println("Введите длину последовательности, она не должна быть больше 100 и меньше 0: ");

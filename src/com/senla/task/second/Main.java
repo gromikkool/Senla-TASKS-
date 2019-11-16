@@ -2,7 +2,7 @@ package com.senla.task.second;
 
 import com.senla.task.first.NumberReader;
 
-public class SecondMain {
+public class Main {
     public static void main(String[] args) {
         NumberReader numberReader = new NumberReader(System.in);
         int firstNumber = numberReader.readInt();

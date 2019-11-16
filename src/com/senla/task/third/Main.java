@@ -2,7 +2,7 @@ package com.senla.task.third;
 
 import java.util.Arrays;
 
-public class ThirdMain {
+public class Main {
     public static void main(String[] args) {
         TextReader textReader = new TextReader();
 
@@ -12,7 +12,6 @@ public class ThirdMain {
         String[] words = input.split(" ");
         int wordsCount = words.length;
 
-        //upperCase to first letter in words
         String[] upperLetterWords = Arrays.stream(words)
                 .map(TextUtil::upperLetter)
                 .toArray(String[]::new);

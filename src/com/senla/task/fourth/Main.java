@@ -6,7 +6,7 @@ import com.senla.task.third.TextReader;
 import java.util.InputMismatchException;
 
 
-public class FourthMain {
+public class Main {
 
     public static void main(String[] args) {
         try {
